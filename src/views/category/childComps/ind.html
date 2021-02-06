@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .father {
+        width: 300px;
+        height: 500px;
+        border: 1px solid;
+      }
+      .one {
+        width: 50px;
+        height: 100px;
+        background-color: aqua;
+      }
+      .two {
+        width: 50px;
+        height: calc(100% - 100px);
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="one"></div>
+      <div class="two"></div>
+    </div>
+  </body>
+  <script>
+    let ary = [1, 2, 4, 54, 786, 13, 486, 132, 132]
+    let newAry = []
+    // for (let i = 0; i < ary.length; i++) {
+    //   if (newAry.indexOf(ary[i]) === -1) {
+    //     newAry.push(ary[i])
+    //   }
+    // }
+
+    for (let i in ary) {
+      if (!newAry.includes(ary[i])) {
+        newAry.push(ary[i])
+      }
+    }
+    console.log(newAry)
+
+    // const result = ary.filter((item, index, ary) => {
+    //   return ary.indexOf(item) === index
+    // })
+    // // console.log(newAry)
+    // console.log(result)
+
+    let obj = {
+      name: 'lzg',
+      age: 18
+    }
+    let o = {}
+    Object.assign(o, obj)
+    console.log(o)
+
+    let arr = [1, 1, 2, 2, 3, 565, 132, 456, 13, 465, 465]
+    const s = new Set(arr)
+    arr1 = [...s]
+    console.log(arr1)
+  </script>
+</html>
